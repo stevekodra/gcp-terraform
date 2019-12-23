@@ -4,6 +4,8 @@
 
 Google Compute Engine (GCE) is the Infrastructure as a Service (IaaS) component of Google Cloud Platform which is built on the global infrastructure that runs Google's search engine, Gmail, YouTube and other services. Google Compute Engine enables users to launch virtual machines (VMs) on demand.
 
+TF documentation: https://www.terraform.io/docs/providers/google/r/compute_instance.html
+
 ## Description
 
 This example will create an virtual instance in GCP project according to user's Project assignment. Instance deploys into Shared VPC host project, therefore can use Interconnect links to company networks.
