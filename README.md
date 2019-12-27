@@ -15,8 +15,8 @@ Google Cloud Platform provides infrastructure as a service, platform as a servic
 
 Repository contains Terraform examples for GCP categorized by their purpose/service.
 
-1. [Google Compute Engine Instance](https://github.com/innovation-lab-prague/gcp-terraform/01-gce-instance) - Virtual Machine Instance
-2. [Google Compute Engine Load Balancer + Instance](https://github.com/innovation-lab-prague/gcp-terraform/02-load-balancer) - Create Load balancer with service exposed on public IP
-3. [Google Kubernetes Engine Cluster](https://github.com/innovation-lab-prague/gcp-terraform/02-gke-cluster) - Private Cluster
-4. [Google Cloud Function Hello World](https://github.com/innovation-lab-prague/gcp-terraform/03-cloud-function) - Simple serverless function
-5. [Google Cloud Build](https://github.com/innovation-lab-prague/gcp-terraform/04-cloud-build) - Start simple build
+1. [Google Compute Engine Instance](https://github.com/innovation-lab-prague/gcp-terraform/tree/master/01-gce-instance) - Virtual Machine Instance
+2. [Google Compute Engine Load Balancer + Instance](https://github.com/innovation-lab-prague/gcp-terraform/tree/master/02-load-balancer) - Create Load balancer with service exposed on public IP
+3. [Google Kubernetes Engine Cluster](https://github.com/innovation-lab-prague/gcp-terraform/tree/master/03-gke-cluster) - Private Cluster
+4. [Google Cloud Function Hello World](https://github.com/innovation-lab-prague/gcp-terraform/tree/master/04-cloud-function) - Simple serverless function
+5. [Google Cloud Build](https://github.com/innovation-lab-prague/gcp-terraform/tree/master/05-cloud-build) - Start simple build
