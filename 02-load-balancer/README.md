@@ -10,12 +10,16 @@ Cloud Load Balancing can put your resources behind a single anycast IP and scale
 
 ## Description
 
-This example will create an virtual instance in GCP project and place it behind load balancer with public IP address. This is the allowed way how to get public IP.
+This example will create an virtual instance in GCP project and place it behind load balancer with public IP address. That's the only allowed way how to get public IP.
 Instance is deployed to Shared VPC - Host project, therefore can use Interconnect links to company networks. When you assign network Tag like `http-public` used in demo, you can access the VM not only from DBG internal network, but also from public internet.
+
+## Diagram
+
+![Picture-1](./asset/02-Google-Cloud-Engine-Load-Balancer.png)
 
 ## Variables
 
-Defined in `terraform.tfvars` file. Before deploying the example, please change values of your `project`. 
+Defined in `terraform.tfvars` file. Before deploying the example, please change values of your `project`.
 Networking project names and related subnetworks for other stages can be found on [Cloud.Hub](https://github.deutsche-boerse.de/pages/dev/cloud.hub/#/google_cloud_platform).
 
 ## Operating System/Base Image

@@ -10,6 +10,10 @@ TF documentation: https://www.terraform.io/docs/providers/google/r/compute_insta
 
 This example will create an virtual instance in GCP project according to user's Project assignment. Instance deploys into Shared VPC host project, therefore can use Interconnect links to company networks.
 
+## Diagram
+
+![Picture-1](./asset/01-Google-Cloud-Engine.png)
+
 ## Variables
 
 Defined in `terraform.tfvars` file. Before deploying the example, please change values of your `project`. Networking project names and related subnetworks for other stages can be found on [Cloud.Hub](https://github.deutsche-boerse.de/pages/dev/cloud.hub/#/google_cloud_platform).

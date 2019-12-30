@@ -7,3 +7,7 @@ Google Kubernetes Engine (GKE) is a managed, production-ready environment for de
 ## Description
 
 Simple Kubernetes cluster with 1 node in each zone.
+
+## Diagram
+
+![Picture-1](./asset/03-Google-Kubernetes-Engine.png)
