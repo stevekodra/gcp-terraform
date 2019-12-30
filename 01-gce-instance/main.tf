@@ -55,7 +55,8 @@ resource "google_compute_instance" "default" {
     # }
   }
 
-  labels = var.labels
+  labels   = var.labels
+  metadata = local.metadata
 
   metadata_startup_script = data.template_file.metadata_startup_script.rendered
 
