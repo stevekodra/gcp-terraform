@@ -24,6 +24,7 @@ source_ranges = [
 ]
 
 tags = [
-  "http-public"
+  "http-server",
+  "ssh"
 ]
 service_port = "80"

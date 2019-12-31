@@ -1,3 +1,8 @@
+locals {
+  metadata = merge(var.labels, {
+    ssh-keys = "${var.ssh_user}:${file("${path.module}/files/id_rsa.pub")}"
+  })
+}
 #=========================================================================#
 # Resource:     google_compute_instance
 # Description:  This resource will create Google Compute Instance. 
@@ -34,7 +39,8 @@ resource "google_compute_instance" "default" {
     # }
   }
 
-  labels = var.labels
+  labels   = var.labels
+  metadata = local.metadata
 
   metadata_startup_script = data.template_file.metadata_startup_script.rendered
 

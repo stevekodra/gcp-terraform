@@ -23,7 +23,7 @@ variable service_port {
 
 variable source_ranges {
   description = "List of addresses allowed to access the service."
-  type        = list
+  type        = list(string)
 }
 
 variable session_affinity {
