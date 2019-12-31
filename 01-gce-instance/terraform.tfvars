@@ -18,3 +18,6 @@ machine_type = "n1-standard-2"
 image_name   = "centos-cloud/centos-7"
 disk_size_gb = "15"
 disk_type    = "pd-ssd"
+tags         = [
+  "ssh"
+]
