@@ -4,6 +4,9 @@ yum install httpd -y
 systemctl start httpd
 systemctl enable httpd
 
+firewall-cmd --permanent --add-service http
+firewall-cmd --reload
+
 mkdir -p /var/www/html
 chown -R $USER:$USER /var/www/html
 chmod -R 755 /var/www

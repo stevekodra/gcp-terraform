@@ -11,7 +11,7 @@ Cloud Load Balancing can put your resources behind a single anycast IP and scale
 ## Description
 
 This example will create an virtual instance in GCP project and place it behind load balancer with public IP address. That's the only allowed way how to get public IP.
-Instance is deployed to Shared VPC - Host project, therefore can use Interconnect links to company networks. When you assign network Tag like `http-public` used in demo, you can access the VM not only from DBG internal network, but also from public internet.
+Instance is deployed to Shared VPC - Host project, therefore can use Interconnect links to company networks. When you assign network Tag like `http-server` used in demo, you can access the VM not only from DBG internal network, but also from public internet.
 
 ## Diagram
 

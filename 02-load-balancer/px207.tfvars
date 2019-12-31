@@ -3,13 +3,13 @@
  *
  * NOTE: This file can be used to set global variables.
  *
- **/
+***/
 
-name = "demo-machine-lb-1"
+name = "px207-lb-1"
 
 region  = "europe-west3"
 zone    = "europe-west3-a"
-project = "dbg-cloud-dev-ba2ce128"
+project = "dbg-risk-dev-0efdec5f"
 
 networking_project = "dbg-network-dev-4743a8f0"
 subnetwork         = "europe-west3-dev-subnet"
@@ -24,7 +24,8 @@ source_ranges = [
 ]
 
 tags = [
+  "ssh",
   "http-server",
-  "ssh"
+  "icmp"
 ]
 service_port = "80"
