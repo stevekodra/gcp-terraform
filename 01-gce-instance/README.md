@@ -26,8 +26,8 @@ We prepare for users of GCP several flavours of Linux and Windows Server 2016/19
 
 ## Bootstraping the instance
 
-To bootstrap your instance, please edit file `/files/bootstrap.sh` and state commands you want to run when instance is starting.
+To bootstrap your instance, please edit file `/templates/bootstrap.sh.tpl` and state commands you want to run when instance is starting.
 
 ## SSH Key
 
-In order to reach instance, you need to provide SSH key to GCE machine. Public part of SSH key is inserted from file `/files/id_rsa.pub`. Don't forget to change the file content before actual deployment.
+In order to reach instance, you need to provide SSH key to GCE machine. Public part of SSH key is inserted from variable `ssh_key`. Don't forget to change the variable before actual deployment.
