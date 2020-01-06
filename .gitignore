@@ -51,3 +51,6 @@ terraform-doc.out
 # .tfplan files
 *.tfplan
 **/*.tfplan
+
+# IDEA project settings
+/.idea/
