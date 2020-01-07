@@ -1,65 +1,41 @@
+// add ssh-key details as metadata
 locals {
-  metadata = merge(var.labels, {
-    ssh-keys = "${var.ssh_user}:${file("${path.module}/files/id_rsa.pub")}"
+  metadata = merge(var.metadata, {
+    ssh-keys = "${var.ssh_user}:${var.ssh_key}"
   })
 }
 
-# The Label key must start with a lowercase character and can be at most 63 characters long. 
-# Can only contain:
-# - lowercase letters 
-# - numeric characters
-# - underscores 
-# - dashes. 
-variable "labels" {
-  type        = map(string)
-  description = "Labels key/value pairs"
-  default = {
-    name           = "example-instance"
-    environment    = "development"
-    creator        = "ab123"
-    owner          = "ab123"
-    costcenter     = "1234567"
-    applicationid  = "0"
-    supportgroupid = "example"
-    productlineid  = "example"
-  }
-}
-
+// create compute engine
 resource "google_compute_instance" "default" {
   name         = var.name
-  zone         = var.zone
   machine_type = var.machine_type
+  zone         = var.zone
   project      = var.project
-  tags         = var.tags
 
-  allow_stopping_for_update = true
+  tags                    = var.tags
+  labels                  = var.labels
+  metadata                = local.metadata
+  metadata_startup_script = data.template_file.default.rendered
 
+  // the boot disk for the instance
   boot_disk {
     auto_delete = var.enable_bootdisk_delete
 
     initialize_params {
-      image = var.image_name
+      image = data.google_compute_image.default.self_link
       type  = var.disk_type
       size  = var.disk_size_gb
     }
   }
 
-  // Local SSD disk
+  // networks to attach to the instance.
   network_interface {
-    subnetwork_project = var.networking_project
     subnetwork         = var.subnetwork
+    subnetwork_project = var.networking_project
     network_ip         = var.network_ip != "" ? var.network_ip : ""
-
-    # access_config {
-    #   // This block assigns Ephemeral *Public* IP - Do not enable
-    # }
   }
 
-  labels   = var.labels
-  metadata = local.metadata
-
-  metadata_startup_script = data.template_file.metadata_startup_script.rendered
-
+  // service account to attach to the instance
   service_account {
     email  = var.service_account_email != "" ? var.service_account_email : ""
     scopes = ["cloud-platform"]
