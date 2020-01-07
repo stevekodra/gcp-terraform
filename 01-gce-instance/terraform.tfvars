@@ -42,7 +42,7 @@ disk_size_gb           = 15
 
 // ssh details
 ssh_user = "demo"
-ssh_key  = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQClVJdoEKYCIPTNdddFifksCxvMQt4p9gcmVeriRTQgcxRRkzZBYImNLHePZ/t3i9ZGBdYY8uysQzrJ6YQ6T6UNm08m203CLcK/9qy4tv+oDkPiOAhC0KfhuAdzfS/wzmzoI9tA5MtMqQkWtudVDj2wpb3v3yzBDjo7zIqec/5sOVXsCdha9pilOa/WO+K2Dzn1NPW5/EqAaiVKZ1B1w572tIxJPX02rJw3uGlaj7qfZJkyXDsLTyA2j7DZbe/T9kMWVpxE4Ittnch7clZQwvbxDOCckZgb8DvYQcUAVUaxhHMM75p2XjlL5Rb0YUSvc/L85L4wLEQVeYF0r6yH4oyL demo"
+ssh_key  = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC7tdIQfRQvM4qbD5hDORHKIHP8yW58lKJLdEK87D6P35HkSK2jwme9JHtbU38FltoSexQzMJAacqWxVc5SPusjndiklBkgAX9VhxGjZN7MZfvmzASBWsOqinQrsQzOoLV6OThjbeqcITP/lYhnJI/zYMyScqopXgkhfDn6dEehkyLC9tLTT/RfrCEEXS8+C4VdHCHzm3MTJeGXQJg0NONbdIrrX97ezGkgv5RDR07jYt/yW+gDZoGnoZqR+GjkV7et8TwDNSolmq9M0IcIuWyDjfTsNkdom7J/GAy8N0CH0RAdCf51mUfiESLEV97vZICvySqmO8W0QQCxzqxE6suV stan"
 
 // service account to attach to the instance
 service_account_email = ""
