@@ -1,6 +1,6 @@
 // provider details
 region  = "europe-west3"
-project = "dbg-risk-dev-0efdec5f"
+project = "dbg-cloud-dev-ba2ce128"
 
 // shared network details
 networking_project = "dbg-network-dev-4743a8f0"
